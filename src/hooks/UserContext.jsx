@@ -4,10 +4,10 @@ const UserContext = createContext();
 
 export const useUser = () => useContext(UserContext);
 
-export const UserProvider = ({ infoStep, children }) => {
-    const [userInfo, setUserInfo] = useState({});
+export const UserProvider = ({ children }) => {
+    const [userInfo, setUserInfo] = useState(null);
 
-    const addInfo = () => {
+    const addInfo = (infoStep) => {
         setUserInfo(prevUserInfo => ({ ...prevUserInfo, infoStep }));
     };
 

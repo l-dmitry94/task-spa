@@ -6,9 +6,10 @@ const theme = {
         green: '5FCB39',
         opacitryGreen: 'rgba(95, 203, 57, 0.20)',
         white: '#FFFFFF',
+        lightGrey: '#e1e1e1',
     },
     fonts: {
-        roboto: '"Roboto", sans-serif',
+        inter: '"Inter", sans-serif',
     },
 };
 

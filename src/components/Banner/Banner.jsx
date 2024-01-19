@@ -1,9 +1,13 @@
+import Styled from './Banner.styled';
+
+const { BannerStyled, Title, Text } = Styled;
+
 const Banner = ({ title, text }) => {
     return (
-        <div className="banner">
-            <h2>{title}</h2>
-            <p>{text}</p>
-        </div>
+        <BannerStyled>
+            <Title>{title}</Title>
+            <Text>{text}</Text>
+        </BannerStyled>
     );
 };
 

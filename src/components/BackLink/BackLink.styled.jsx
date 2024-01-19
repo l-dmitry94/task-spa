@@ -5,6 +5,8 @@ const Styled = {
     LinkStyled: styled(Link)`
         display: flex;
         align-items: center;
+        padding: 8px 0;
+        margin: 0 auto;
     `,
 
     LinkBackIcon: styled.svg`
@@ -16,7 +18,12 @@ const Styled = {
     LinkWrapper: styled.div`
         display: flex;
         align-items: center;
-        font-family: ${props => props.theme.fonts.roboto}
+        font-family: ${props => props.theme.fonts.inter};
+        color: ${props => props.theme.colors.backLink};;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.03em;
     `,
 
     ImageWrapper: styled.div`
