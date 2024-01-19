@@ -1,16 +1,13 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
+import Goal from 'pages/Goal';
+import { Route, Routes } from 'react-router-dom';
+
+const App = () => {
+    return (
+        <Routes>
+            <Route path="/" element={<Goal to="/" />} />
+            <Route path="/step-2" element={<div>Step 2</div>} />
+        </Routes>
+    );
 };
+
+export default App;
