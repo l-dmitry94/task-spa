@@ -4,7 +4,7 @@ import ContentItem from './ContentItem';
 const { Wrapper, Title, ContentList } = Styled;
 const Content = ({ title, goals }) => {
     const items = goals.map(({ text, image }, index) => (
-        <ContentItem key={index} text={text} image={image} />
+        <ContentItem key={index} goal={text} image={image} />
     ));
 
     return (

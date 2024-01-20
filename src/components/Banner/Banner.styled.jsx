@@ -16,9 +16,11 @@ const Styled = {
 
     Text: styled.p`
         color: ${props => props.theme.colors.grey};
+        max-width: 330px;
         font-size: 14px;
         line-height: 1.71; 
         letter-spacing: 0.02em;
+        margin: 0 auto;
     `,
 };
 
