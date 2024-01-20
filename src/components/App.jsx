@@ -7,6 +7,7 @@ const App = () => {
         <Routes>
             <Route path="/" element={<Goal to="/" />} />
             <Route path="/step-2" element={<Measure to="/" />} />
+            <Route path="/step-3" element={<div>Step-3</div>} />
         </Routes>
     );
 };
