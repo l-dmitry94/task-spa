@@ -3,7 +3,7 @@ import Styled from './Tabs.styled';
 
 const tabsPanel = ['ft', 'cm'];
 
-const { TabList, TabItem } = Styled;
+const { TabsSection, TabList, TabItem } = Styled;
 
 const Tabs = ({ tabs }) => {
     const [activeIndexTab, setActiveIndex] = useState(0);
@@ -24,23 +24,26 @@ const Tabs = ({ tabs }) => {
 
     const tabPanelItems = tabsPanel.map((tabPanel, index) => (
         <Fragment key={index}>
-            {index === activeIndexTab && <ul>
-                <div>
-                    <label htmlFor="ft">Height: </label>
-                    <input type="text" id='ft'/>
-
-                </div>
-                    <label htmlFor="ft">Current Weight:</label>
-                    <input type="text" />
-                </ul>}
+            {index === activeIndexTab && (
+                <ul>
+                    <div>
+                        <label htmlFor="height">
+                            {`Height(${tabPanel}): `}{' '}
+                        </label>
+                        <input type="text" id="height" />
+                    </div>
+                    <label htmlFor="weight">{`Current Weight(${tabPanel}): `}</label>
+                    <input type="text" id="weight" />
+                </ul>
+            )}
         </Fragment>
     ));
 
     return (
-        <section className="tabs">
+        <TabsSection>
             <TabList>{tabsItems}</TabList>
             {tabPanelItems}
-        </section>
+        </TabsSection>
     );
 };
 

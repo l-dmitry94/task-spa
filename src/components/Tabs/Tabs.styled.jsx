@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 
 const Styled = {
+    TabsSection: styled.section`
+        margin-top: 90px;
+    `,
     TabList: styled.ul`
         display: flex;
         border-radius: 10px;

@@ -6,7 +6,7 @@ const App = () => {
     return (
         <Routes>
             <Route path="/" element={<Goal to="/" />} />
-            <Route path="/step-2" element={<Measure />} />
+            <Route path="/step-2" element={<Measure to="/" />} />
         </Routes>
     );
 };
