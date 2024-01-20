@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react';
 import Styled from './Tabs.styled';
 
-const tabsPanel = ['TabPanel-1', 'TabPanel-2'];
+const tabsPanel = ['ft', 'cm'];
 
 const { TabList, TabItem } = Styled;
 
@@ -24,7 +24,15 @@ const Tabs = ({ tabs }) => {
 
     const tabPanelItems = tabsPanel.map((tabPanel, index) => (
         <Fragment key={index}>
-            {index === activeIndexTab && <div>{tabPanel}</div>}
+            {index === activeIndexTab && <ul>
+                <div>
+                    <label htmlFor="ft">Height: </label>
+                    <input type="text" id='ft'/>
+
+                </div>
+                    <label htmlFor="ft">Current Weight:</label>
+                    <input type="text" />
+                </ul>}
         </Fragment>
     ));
 
