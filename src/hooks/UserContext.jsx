@@ -8,7 +8,7 @@ export const UserProvider = ({ children }) => {
     const [userInfo, setUserInfo] = useState(null);
 
     const addInfo = (infoStep) => {
-        setUserInfo(prevUserInfo => ({ ...prevUserInfo, infoStep }));
+        setUserInfo(prevUserInfo => ({ ...prevUserInfo, ...infoStep }));
     };
 
     return <UserContext.Provider value={{ addInfo, userInfo }}>
