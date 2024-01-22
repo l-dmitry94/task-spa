@@ -21,6 +21,7 @@ const Tabs = ({ tabs }) => {
     const [activeIndexTab, setActiveIndex] = useState(0);
     const [measuresFt, setMeasuresFt] = useState({ ...initialMeasureFt });
     const [measuresCm, setMeasuresCm] = useState({ ...initialMeasureCm });
+    const [isEnterData, setIsEnterData] = useState(false)
 
     const changeIndex = index => {
         setActiveIndex(index);
@@ -40,6 +41,10 @@ const Tabs = ({ tabs }) => {
                 [name]: value,
             });
         }
+
+        if((measuresFt.heightFt && measuresFt.weightFt) || (measuresCm.heightCm && measuresCm.weightCm)) {
+            setIsEnterData(value !== "")
+        }
     };
 
     const tabsItems = tabs.map((tab, index) => (
@@ -57,7 +62,7 @@ const Tabs = ({ tabs }) => {
             {index === activeIndexTab && (
                 <InputList>
                     <Input
-                        type="text"
+                        type="number"
                         placeholder={`Height(${tabPanel})`}
                         value={
                             tabPanel === 'ft'
@@ -68,7 +73,7 @@ const Tabs = ({ tabs }) => {
                         onChange={event => onChangeInput(event, tabPanel)}
                     />
                     <Input
-                        type="text"
+                        type="number"
                         placeholder={`Current Weight(${tabPanel}): `}
                         value={
                             tabPanel === 'ft'
@@ -97,6 +102,7 @@ const Tabs = ({ tabs }) => {
                 text="Continue"
                 to="/step-3"
                 data={{...measuresFt, ...measuresCm}}
+                isEnterData={isEnterData}
             />
         </>
     );
