@@ -14,6 +14,7 @@ const Styled = {
         border-radius: 20.848px;
         border: ${props => `1.042px solid ${props.theme.colors.lightGrey}`};
         background: linear-gradient(214deg, #f1f1f1 12.33%, #fff 69.93%);
+        overflow: hidden;
     `,
 
     ContentText: styled.p`

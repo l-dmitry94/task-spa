@@ -7,8 +7,6 @@ import './index.css';
 import App from 'components/App';
 import theme from 'constants/theme';
 
-
-
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <UserProvider>

@@ -6,7 +6,7 @@ const Styled = {
         display: flex;
         align-items: center;
         padding: 8px 0;
-        margin: 0 auto;
+        margin: ${({left})=> left ? '0' : '0 auto'};
     `,
 
     LinkBackIcon: styled.svg`

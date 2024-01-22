@@ -1,16 +1,16 @@
+import { useLocation } from 'react-router-dom';
 import backArrow from '../../images/icon.svg';
 import avocado from '../../images/avocado.png';
-import { useLocation } from 'react-router-dom';
 import Styled from './BackLink.styled';
 
 const { LinkStyled, LinkBackIcon, LinkWrapper, ImageWrapper } = Styled;
 
-const BackLink = ({ to }) => {
+const BackLink = ({ to, left }) => {
     const location = useLocation();
     const backLinkHref = location.state?.from ?? to;
 
     return (
-        <LinkStyled to={backLinkHref}>
+        <LinkStyled to={backLinkHref} left={left}>
             <LinkBackIcon>
                 <use href={`${backArrow}#icon-back-arrow`}></use>
             </LinkBackIcon>
