@@ -21,7 +21,7 @@ const Exercise = ({ to }) => {
                     text="Physical exercise means a lot for a woman who 
                             wants to lose kilos and works at the office"
                 />
-                <Content title="How active are you during the day?" data={exerciseData}/>
+                <Content title="How active are you during the day?" exerciseData={exerciseData} exerciseBool={true}/>
             </Container>
         </Main>
     );

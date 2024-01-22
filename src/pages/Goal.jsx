@@ -17,7 +17,7 @@ const Goal = ({ to }) => {
                         achieve them"
                 />
 
-                <Content title="What are your goals?" data={goals} />
+                <Content title="What are your goals?" goals={goals} />
             </Container>
         </Main>
     );

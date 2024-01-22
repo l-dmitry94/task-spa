@@ -19,6 +19,17 @@ const Styled = {
         display: flex;
         gap: 16px;
         flex-wrap: wrap;
+
+        ${({exercise}) => exercise && `
+            gap: 15px;
+            flex-wrap: nowrap;
+            flex-direction: column
+        `}
+    `,
+
+    ExerciseWrapper: styled.div`
+        display: flex;
+        gap: 15px;
     `
 };
 
