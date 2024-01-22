@@ -6,7 +6,7 @@ const Banner = ({ title, text }) => {
     return (
         <BannerStyled>
             <Title>{title}</Title>
-            <Text>{text}</Text>
+            {text && <Text>{text}</Text>}
         </BannerStyled>
     );
 };
