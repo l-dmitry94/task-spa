@@ -7,7 +7,6 @@ const ContinueButtonStyled = styled(Link)`
     justify-content: center;
     height: 50px;
     border-radius: 12px;
-    opacity: 0.3;
     background-color: ${props => props.theme.colors.green};
     color: ${props => props.theme.colors.white};
     font-family: ${props => props.theme.fonts.inter};
@@ -16,6 +15,13 @@ const ContinueButtonStyled = styled(Link)`
     line-height: 1.44;
     letter-spacing: 0.01em;
     margin-top: 100px;
+
+    ${({ enter }) =>
+        enter === 'true'
+            ? `opacity: 1; 
+                pointer-events: auto`
+            : `opacity: 0.3; 
+                pointer-events: none`}
 `;
 
 export default ContinueButtonStyled;
