@@ -1,26 +1,31 @@
 import Styled from './Content.styled';
 import ContentItem from './ContentItem';
+import staticImage from "../../images/step-4/exercise-1.png"
 
-const { Wrapper, Title, ContentList } = Styled;
-const Content = ({ title, data }) => {
-    let items = null;
+const { Wrapper, Title, ContentList, ExerciseWrapper, } = Styled;
+const Content = ({ title, goals, exerciseData, exerciseBool }) => {
+    let items = [];
 
-    items = data.map((item, index) => {
-        if (typeof item === 'object' && item.text && item.image) {
-            return (
-                <ContentItem key={index} goal={item.text} image={item.image} />
-            );
-        } else if (typeof item === 'string') {
-            return <ContentItem key={index} exercise={item} />;
-        } else {
-            return null;
-        }
-    });
+    if (goals) {
+        items = goals.map(({ text, image }, index) => (
+            <ContentItem key={index} goal={text} image={image} />
+        ));
+    } else if(exerciseData) {
+        items = exerciseData.map((exercise, index) => (
+            <ContentItem key={index} exercise={exercise} exerciseBool={exerciseBool} />
+        ))
+    }
 
     return (
         <Wrapper>
             {title && <Title>{title}</Title>}
-            <ContentList>{items}</ContentList>
+            {goals && <ContentList>{items}</ContentList>}
+            {exerciseData && (
+                <ExerciseWrapper>
+                    <img src={staticImage} alt="exercise" />
+                    <ContentList exercise={exerciseBool}>{items}</ContentList>
+                </ExerciseWrapper>
+            )}
         </Wrapper>
     );
 };

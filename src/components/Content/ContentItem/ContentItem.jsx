@@ -1,10 +1,9 @@
 import { useUser } from 'hooks/UserContext';
 import Styled from './ContentItem.styled';
-import exerciseImage from "../../../images/step-4/exercise-1.png"
 
 const { Item, ContentLink, ContentText } = Styled;
 
-const ContentItem = ({ goal, image, exercise }) => {
+const ContentItem = ({ goal, image, exercise, exerciseBool }) => {
     const { addInfo } = useUser();
     return (
         <>
@@ -22,8 +21,12 @@ const ContentItem = ({ goal, image, exercise }) => {
 
             {exercise && (
                 <Item>
-                    <ContentLink to={'/thank-you'} onClick={() => addInfo({ exercise })}>
-                        <p>{exercise}</p>
+                    <ContentLink
+                        to={'/thank-you'}
+                        onClick={() => addInfo({ exercise })}
+                        exercisestyle={exerciseBool.toString()}
+                    >
+                        <ContentText exercisestyle={exerciseBool.toString()}>{exercise}</ContentText>
                     </ContentLink>
                 </Item>
             )}
