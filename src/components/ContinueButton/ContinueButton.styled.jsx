@@ -16,8 +16,8 @@ const ContinueButtonStyled = styled(Link)`
     letter-spacing: 0.01em;
     margin-top: 100px;
 
-    ${({ enter }) =>
-        enter === 'true'
+    ${({ enter, select }) =>
+        enter === 'true' || select === 'true'
             ? `opacity: 1; 
                 pointer-events: auto`
             : `opacity: 0.3; 
