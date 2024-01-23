@@ -32,7 +32,7 @@ Deployment status of the last commit is displayed by an icon next to its identif
 - **Green color** - deployment completed successfully.
 - **Red color** - an error occurred during linting, build or deploy.
 
-### Живая страница
+### Live Page
 
 After some time, usually a couple of minutes, the live page can be viewed 
 at the address specified in the edited `homepage` property.
