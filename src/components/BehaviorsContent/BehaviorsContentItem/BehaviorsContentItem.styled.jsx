@@ -11,10 +11,14 @@ const Styled = {
         border: ${props => `1px solid ${props.theme.colors.lightGrey}`};
         background: ${props => props.theme.colors.white};
         cursor: pointer;
-        padding: 12px 24px 12px 15px;
+        padding: 12px 16px 12px 15px;
 
         ${({ selected }) =>
-            selected && `border: 1px solid green`}
+            selected && `border: 1px solid green`};
+
+            @media (min-width: 360px) {
+                padding: 12px 24px 12px 15px;
+            }
     `,
     BehaviorText: styled.p`
         color: ${props => props.theme.colors.generalBlack};
