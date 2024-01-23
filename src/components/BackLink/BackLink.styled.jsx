@@ -18,7 +18,7 @@ const Styled = {
     LinkWrapper: styled.div`
         display: flex;
         align-items: center;
-        font-family: ${props => props.theme.fonts.inter};
+        font-family: ${props => props.theme.fonts.primaryFont};
         color: ${props => props.theme.colors.backLink};;
         font-size: 18px;
         font-weight: 600;

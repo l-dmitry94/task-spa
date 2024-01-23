@@ -9,7 +9,7 @@ const theme = {
         lightGrey: '#e1e1e1',
     },
     fonts: {
-        inter: '"Inter", sans-serif',
+        primaryFont: '"Inter", sans-serif',
     },
 };
 

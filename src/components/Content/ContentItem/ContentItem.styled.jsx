@@ -26,7 +26,7 @@ const Styled = {
 
     ContentText: styled.p`
         color: ${props => props.theme.colors.generalBlack};
-        font-family: ${props => props.theme.fonts.inter};
+        font-family: ${props => props.theme.fonts};
         font-weight: 500;
         line-height: 1.37;
         letter-spacing: 0.01em;

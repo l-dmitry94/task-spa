@@ -7,7 +7,7 @@ const Styled = {
     Title: styled.h3`
         color: ${props => props.theme.colors.generalBlack};
         text-align: center;
-        font-family: ${props => props.theme.fonts.inter};
+        font-family: ${props => props.theme.fonts.primaryFont};
         font-size: 14px;
         font-weight: 700;
         line-height: 1.72;
