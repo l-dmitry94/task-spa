@@ -20,7 +20,7 @@ const Styled = {
         height: 32px;
         color: ${props => props.theme.colors.green};
         text-align: center;
-        font-family: ${props => props.theme.fonts.inter};
+        font-family: ${props => props.theme.fonts.primaryFont};
         font-size: 12px;
         font-style: normal;
         font-weight: 800;
@@ -46,7 +46,7 @@ const Styled = {
         width: 100%;
         height: 64px;
         color: ${props => props.theme.colors.generalBlack};
-        font-family: ${props => props.theme.fonts.inter};
+        font-family: ${props => props.theme.fonts.primaryFont};
         font-size: 14px;
         line-height: 1.71;
         letter-spacing: 0.02em;
@@ -59,7 +59,7 @@ const Styled = {
 
         &::placeholder {
             color: ${props => props.theme.colors.generalBlack};
-            font-family: ${props => props.theme.fonts.inter};
+            font-family: ${props => props.theme.fonts.primaryFont};
             opacity: 1
         }
 

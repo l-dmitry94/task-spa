@@ -9,7 +9,7 @@ const ContinueButtonStyled = styled(Link)`
     border-radius: 12px;
     background-color: ${props => props.theme.colors.green};
     color: ${props => props.theme.colors.white};
-    font-family: ${props => props.theme.fonts.inter};
+    font-family: ${props => props.theme.fonts.primaryFont};
     font-size: 18px;
     font-weight: 700;
     line-height: 1.44;

@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 const Styled = {
     BannerStyled: styled.div`
         text-align: center;
-        font-family: ${props => props.theme.fonts.inter};
+        font-family: ${props => props.theme.fonts.primaryFont};
         padding: 15px 0;
     `,
 

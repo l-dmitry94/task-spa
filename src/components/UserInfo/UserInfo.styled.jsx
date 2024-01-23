@@ -9,7 +9,7 @@ const Styled = {
     `,
 
     UserInfoItem: styled.li`
-        font-family: ${props => props.theme.fonts.inter};
+        font-family: ${props => props.theme.fonts.primaryFont};
         font-size: 18px;
         line-height: 1.5;
     `,

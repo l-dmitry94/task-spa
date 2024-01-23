@@ -22,7 +22,7 @@ const Styled = {
     `,
     BehaviorText: styled.p`
         color: ${props => props.theme.colors.generalBlack};
-        font-family: ${props => props.theme.fonts.inter};
+        font-family: ${props => props.theme.fonts.primaryFont};
         font-size: 12px;
         font-weight: 400;
         line-height: 1.5;
